@@ -1,9 +1,10 @@
 import React from "react";
 
 const Child=({cartItems,setCartItems})=>{
-    function removeitem(index){
-        cartItems.splice(index,1)
-        setCartItems([...cartItems]);
+    function removeitem(id){
+        // cartItems.splice(index,1)
+        // setCartItems([...cartItems]);
+        setCartItems(cartItems.filter((item,index)=>index!==id));
     }
     return <div className="child">
         <h2>Child Component</h2>
